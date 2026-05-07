@@ -1,18 +1,17 @@
 backend:
   name: git-gateway
-  branch: main # Asegúrate de que tu rama se llame main
+  branch: main # Asegúrate de que tu rama sea 'main' y no 'master'
 
-media_folder: "assets/img" 
-public_folder: "/assets/img"
+media_folder: "public/images" # Donde se subirán las fotos
+public_folder: "/images"
 
 collections:
-  - name: "landing"
-    label: "Contenido de la Web"
-    files:
-      - file: "index.html"
-        label: "Página Principal"
-        name: "home"
-        fields:
-          - {label: "Título Principal", name: "hero_title", widget: "string"}
-          - {label: "Subtítulo / Descripción", name: "hero_desc", widget: "text"}
-          - {label: "Texto del Botón", name: "cta_text", widget: "string"}
+  - name: "blog"
+    label: "Blog"
+    folder: "content/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Fecha", name: "date", widget: "datetime" }
+      - { label: "Cuerpo", name: "body", widget: "markdown" }
