@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>José Andrés Guerra | Consultoría de Transformación Turística</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        :root {
+
+            --olive-dark: #3D441E;
+
+            --olive-primary: #556B2F;
+
+            --olive-light: #A3B18A;
+
+            --cream: #F9FAF7;
+
+        }
+
+        body {
+
+            background-color: var(--cream);
+
+            color: var(--olive-dark);
+
+            font-family: 'Inter', sans-serif;
+
+            scroll-behavior: smooth;
+
+        }
+
+        h1, h2, h3 {
+
+            font-family: 'Space Grotesk', sans-serif;
+
+            color: var(--olive-dark);
+
+        }
+
+        .bg-olive { background-color: var(--olive-primary); }
+
+        .text-olive { color: var(--olive-primary); }
+
+        .border-olive { border-color: var(--olive-primary); }
+
+        
+
+        .hero-pattern {
+
+            background-color: var(--cream);
+
+            background-image: linear-gradient(rgba(249, 250, 247, 0.85), rgba(249, 250, 247, 0.85)), url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&q=80&w=2000');
+
+            background-size: cover;
+
+            background-position: center;
+
+        }
+
+
+
+        .btn-primary {
+
+            background-color: var(--olive-primary);
+
+            color: white;
+
+            transition: all 0.3s ease;
+
+        }
+
+        .btn-primary:hover {
+
+            background-color: var(--olive-dark);
+
+            transform: translateY(-2px);
+
+        }
+
+
+
+        .service-card, .project-card, .news-card {
+
+            background: white;
+
+            border: 1px solid rgba(85, 107, 47, 0.1);
+
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+        }
+
+        .service-card:hover, .project-card:hover {
+
+            border-color: var(--olive-primary);
+
+            box-shadow: 0 20px 40px rgba(85, 107, 47, 0.05);
+
+        }
+
+
+
+        .image-placeholder {
+
+            background-color: #e5e7eb;
+
+            overflow: hidden;
+
+        }
+
+    </style>
+
+</head>
+
+<body class="antialiased">
+
+
+
+    <!-- Navegación -->
+
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-sm border-b border-olive/10 py-5">
+
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+
+            <span class="text-xl font-bold tracking-tighter uppercase">José Andrés Guerra<span class="text-olive">.</span></span>
+
+            <div class="hidden md:flex space-x-8 text-[11px] font-bold uppercase tracking-[0.2em]">
+
+                <a href="#soluciones" class="hover:text-olive transition">Soluciones</a>
+
+                <a href="#proyectos" class="hover:text-olive transition">Casos de Éxito</a>
+
+                <a href="#blog" class="hover:text-olive transition">Perspectivas</a>
+
+                <a href="#reserva" class="text-olive border-b border-olive">Agendar Auditoría</a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- Hero Section -->
+
+    <header class="relative pt-48 pb-32 px-6 hero-pattern flex flex-col items-center text-center">
+
+        <div class="inline-block px-4 py-1 border border-olive/20 text-olive text-[10px] font-bold tracking-[0.3em] uppercase mb-10 bg-white/50">
+
+            Estratega de Eficiencia Turística
+
+        </div>
+
+        <h1 class="text-5xl md:text-8xl font-bold max-w-5xl leading-[1] mb-10 tracking-tight">
+
+            Menos gestión manual.<br><span class="italic text-olive font-light">Más reservas directas.</span>
+
+        </h1>
+
+        <p class="text-olive/80 max-w-2xl text-lg mb-12 leading-relaxed font-medium">
+
+            Consultoría técnica liderada por José Andrés Guerra para automatizar la operación de hoteles, agencias y destinos mediante IA y flujos optimizados de conversión.
+
+        </p>
+
+        <div class="flex flex-col sm:row gap-5">
+
+            <a href="#reserva" class="btn-primary px-10 py-4 font-bold text-xs uppercase tracking-widest">
+
+                Solicitar Auditoría Operativa
+
+            </a>
+
+            <a href="#proyectos" class="bg-white border border-olive/20 px-10 py-4 font-bold text-xs uppercase tracking-widest hover:bg-olive hover:text-white transition">
+
+                Ver Proyectos Realizados
+
+            </a>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- Autoridad / Logos -->
+
+    <section class="py-16 border-y border-olive/5 bg-white">
+
+        <div class="max-w-7xl mx-auto px-6">
+
+            <p class="text-center text-[9px] uppercase tracking-[0.4em] text-olive/40 mb-10 font-bold">Experiencia validada en instituciones de alto nivel</p>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 opacity-60 grayscale hover:grayscale-0 transition duration-500">
+
+                <div class="flex items-center justify-center font-bold border-r border-olive/10">QUITO TURISMO</div>
+
+                <div class="flex items-center justify-center font-bold border-r border-olive/10">EQUAIR</div>
+
+                <div class="flex items-center justify-center font-bold border-r border-olive/10">ADOBE</div>
+
+                <div class="flex items-center justify-center font-bold">CETEC</div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Casos de Éxito / Proyectos -->
+
+    <section id="proyectos" class="py-32 bg-white">
+
+        <div class="max-w-7xl mx-auto px-6">
+
+            <div class="flex justify-between items-end mb-16">
+
+                <div>
+
+                    <h2 class="text-3xl font-bold mb-4 tracking-tighter italic text-olive">Casos de Éxito</h2>
+
+                    <p class="text-olive/50 text-sm uppercase tracking-widest font-bold">Resultados Tangibles en el Sector</p>
+
+                </div>
+
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+
+                <!-- Tarjeta Proyecto 1 -->
+
+                <div class="project-card group overflow-hidden">
+
+                    <div class="aspect-video image-placeholder">
+
+                        <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&q=80&w=1000" alt="Automatización Hotelera" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+
+                    </div>
+
+                    <div class="p-8">
+
+                        <div class="flex justify-between items-start mb-4">
+
+                            <h3 class="text-2xl font-bold">Sistemas IA para Hotelería</h3>
+
+                            <span class="text-[10px] bg-olive/10 text-olive px-2 py-1 font-bold uppercase tracking-widest">Chatbots + CRM</span>
+
+                        </div>
+
+                        <p class="text-olive/70 text-sm mb-6 leading-relaxed">Implementación de flujos de reserva automatizados que redujeron el costo de adquisición de cliente en un 25%.</p>
+
+                        <div class="flex gap-4 border-t border-olive/5 pt-6">
+
+                            <div><p class="text-xs font-bold text-olive uppercase tracking-tighter">ROI</p><p class="text-xs text-olive/40">+4.5x</p></div>
+
+                            <div><p class="text-xs font-bold text-olive uppercase tracking-tighter">Tiempo</p><p class="text-xs text-olive/40">Real-time</p></div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Tarjeta Proyecto 2 -->
+
+                <div class="project-card group overflow-hidden">
+
+                    <div class="aspect-video image-placeholder">
+
+                        <img src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?auto=format&fit=crop&q=80&w=1000" alt="Promoción de Destino" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+
+                    </div>
+
+                    <div class="p-8">
+
+                        <div class="flex justify-between items-start mb-4">
+
+                            <h3 class="text-2xl font-bold">Performance de Destinos</h3>
+
+                            <span class="text-[10px] bg-olive/10 text-olive px-2 py-1 font-bold uppercase tracking-widest">Influencer ROI</span>
+
+                        </div>
+
+                        <p class="text-olive/70 text-sm mb-6 leading-relaxed">Coordinación de activos multimedia para promoción de ciudad, alcanzando +2M de visualizaciones calificadas.</p>
+
+                        <div class="flex gap-4 border-t border-olive/5 pt-6">
+
+                            <div><p class="text-xs font-bold text-olive uppercase tracking-tighter">Alcance</p><p class="text-xs text-olive/40">+2M Visualizaciones</p></div>
+
+                            <div><p class="text-xs font-bold text-olive uppercase tracking-tighter">Conversión</p><p class="text-xs text-olive/40">Optimizado</p></div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Soluciones de Consultoría -->
+
+    <section id="soluciones" class="py-32 max-w-7xl mx-auto px-6">
+
+        <h2 class="text-4xl font-bold mb-20 text-center tracking-tighter italic text-olive">Ejes de Consultoría Directa</h2>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- Servicio 1 -->
+
+            <div class="p-10 service-card flex flex-col border-t-4 border-t-olive">
+
+                <h3 class="text-xl font-bold mb-4 italic">Chatbots & Atención</h3>
+
+                <p class="text-sm text-olive/70 leading-relaxed mb-6">Implementación de sistemas conversacionales que califican y reservan sin intervención humana.</p>
+
+                <div class="mt-auto text-[10px] font-bold uppercase tracking-widest text-olive/40">WhatsApp / Web / Messenger</div>
+
+            </div>
+
+            <!-- Servicio 2 -->
+
+            <div class="p-10 service-card flex flex-col bg-olive text-white">
+
+                <h3 class="text-xl font-bold mb-4 text-white italic">IA Ventas B2B</h3>
+
+                <p class="text-sm text-white/80 leading-relaxed mb-6">Herramientas de automatización para calificar prospectos y cerrar ventas en entornos turísticos profesionales.</p>
+
+                <div class="mt-auto text-[10px] font-bold uppercase tracking-widest text-white/40">CRM / Lead Scoring / IA</div>
+
+            </div>
+
+            <!-- Servicio 3 -->
+
+            <div class="p-10 service-card flex flex-col border-t-4 border-t-olive">
+
+                <h3 class="text-xl font-bold mb-4 italic">Influencer Strategy</h3>
+
+                <p class="text-sm text-olive/70 leading-relaxed mb-6">Gestión de campañas con creadores basadas en ROI real, no en métricas de vanidad.</p>
+
+                <div class="mt-auto text-[10px] font-bold uppercase tracking-widest text-olive/40">Contratos / Auditoría / Conversión</div>
+
+            </div>
+
+            <!-- Servicio 4 -->
+
+            <div class="p-10 service-card flex flex-col border-t-4 border-t-olive">
+
+                <h3 class="text-xl font-bold mb-4 italic">Social Media Content</h3>
+
+                <p class="text-sm text-olive/70 leading-relaxed mb-6">Creación de contenido optimizado para retención y viralidad estratégica en el sector turismo.</p>
+
+                <div class="mt-auto text-[10px] font-bold uppercase tracking-widest text-olive/40">Video / Storytelling / IA</div>
+
+            </div>
+
+            <!-- Servicio 5 -->
+
+            <div class="p-10 service-card flex flex-col border-t-4 border-t-olive">
+
+                <h3 class="text-xl font-bold mb-4 italic">Automatización Eventos</h3>
+
+                <p class="text-sm text-olive/70 leading-relaxed mb-6">Soluciones para la gestión masiva de asistentes y seguimiento de leads en ferias y congresos.</p>
+
+                <div class="mt-auto text-[10px] font-bold uppercase tracking-widest text-olive/40">Check-in / CRM / Registros</div>
+
+            </div>
+
+            <!-- Servicio 6 -->
+
+            <div class="p-10 service-card flex flex-col border-t-4 border-t-olive">
+
+                <h3 class="text-xl font-bold mb-4 italic">Contenido con IA</h3>
+
+                <p class="text-sm text-olive/70 leading-relaxed mb-6">Formación en el uso de herramientas generativas para acelerar la producción visual un 60%.</p>
+
+                <div class="mt-auto text-[10px] font-bold uppercase tracking-widest text-olive/40">Midjourney / Runway / ChatGPT</div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Recomendados / Comentarios -->
+
+    <section class="py-32 bg-olive text-white overflow-hidden">
+
+        <div class="max-w-5xl mx-auto px-6 text-center">
+
+            <p class="text-[10px] uppercase tracking-[0.4em] mb-12 opacity-50">Lo que dicen los líderes del sector</p>
+
+            <div class="relative">
+
+                <blockquote class="text-2xl md:text-4xl font-medium italic leading-snug mb-12">
+
+                    "José Andrés Guerra aporta una visión técnica que es escasa en el marketing turístico tradicional. Su enfoque en la automatización nos ha permitido escalar operaciones sin aumentar la nómina."
+
+                </blockquote>
+
+                <div class="flex items-center justify-center gap-4">
+
+                    <div class="w-14 h-14 rounded-full bg-cream/10 border border-white/20"></div>
+
+                    <div class="text-left">
+
+                        <p class="font-bold text-sm">Director de Promoción</p>
+
+                        <p class="text-xs opacity-50 uppercase tracking-widest italic">Organización de Turismo, LATAM</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Newsfeed (Perspectivas) -->
+
+    <section id="blog" class="py-32 max-w-7xl mx-auto px-6">
+
+        <div class="flex justify-between items-center mb-16">
+
+            <h2 class="text-3xl font-bold italic tracking-tighter">Perspectivas Estratégicas</h2>
+
+            <a href="#" class="text-xs font-bold uppercase tracking-widest text-olive border-b border-olive">Explorar Blog</a>
+
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+
+            <!-- Noticia 1 -->
+
+            <article class="news-card group cursor-pointer">
+
+                <div class="h-56 overflow-hidden bg-gray-200">
+
+                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=600" alt="IA Trends" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+
+                </div>
+
+                <div class="p-8">
+
+                    <p class="text-[9px] font-bold text-olive uppercase tracking-[0.2em] mb-3">IA Turística / 2025</p>
+
+                    <h3 class="text-lg font-bold mb-3 leading-tight group-hover:text-olive transition">Cómo los Chatbots están salvando el canal directo.</h3>
+
+                    <p class="text-xs text-olive/60 leading-relaxed">Un análisis sobre la retención de clientes en hoteles boutique mediante IA conversacional.</p>
+
+                </div>
+
+            </article>
+
+            <!-- Noticia 2 -->
+
+            <article class="news-card group cursor-pointer">
+
+                <div class="h-56 overflow-hidden bg-gray-200">
+
+                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=600" alt="Workflows" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+
+                </div>
+
+                <div class="p-8">
+
+                    <p class="text-[9px] font-bold text-olive uppercase tracking-[0.2em] mb-3">Eficiencia Operativa</p>
+
+                    <h3 class="text-lg font-bold mb-3 leading-tight group-hover:text-olive transition">Automatización de ferias: Captura inteligente.</h3>
+
+                    <p class="text-xs text-olive/60 leading-relaxed">Guía táctica para no perder un solo prospecto durante eventos masivos presenciales.</p>
+
+                </div>
+
+            </article>
+
+            <!-- Noticia 3 -->
+
+            <article class="news-card group cursor-pointer">
+
+                <div class="h-56 overflow-hidden bg-gray-200">
+
+                    <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=600" alt="Content ROI" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+
+                </div>
+
+                <div class="p-8">
+
+                    <p class="text-[9px] font-bold text-olive uppercase tracking-[0.2em] mb-3">Marketing / ROI</p>
+
+                    <h3 class="text-lg font-bold mb-3 leading-tight group-hover:text-olive transition">Métricas de Vanidad vs. Reservas Reales.</h3>
+
+                    <p class="text-xs text-olive/60 leading-relaxed">Por qué 1 millón de vistas no siempre pagan la nómina y cómo arreglarlo.</p>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Área de Reserva -->
+
+    <section id="reserva" class="py-32 bg-olive/5">
+
+        <div class="max-w-4xl mx-auto px-6 bg-white p-12 border border-olive/10 shadow-2xl relative overflow-hidden">
+
+            <div class="absolute top-0 left-0 w-full h-1 bg-olive"></div>
+
+            <div class="text-center mb-12">
+
+                <h2 class="text-3xl font-bold italic tracking-tighter mb-4">Agenda una Auditoría Operativa</h2>
+
+                <p class="text-olive/60 text-sm">Sesión estratégica personalizada de 45 minutos con José Andrés Guerra.</p>
+
+            </div>
+
+            <form class="grid md:grid-cols-2 gap-6">
+
+                <div class="space-y-2">
+
+                    <label class="text-[10px] font-bold uppercase tracking-widest text-olive/50">Nombre y Apellido</label>
+
+                    <input type="text" class="w-full border-b border-olive/20 py-2 focus:border-olive outline-none transition text-sm bg-transparent" placeholder="Ej. Javier Mendoza">
+
+                </div>
+
+                <div class="space-y-2">
+
+                    <label class="text-[10px] font-bold uppercase tracking-widest text-olive/50">Empresa o Destino</label>
+
+                    <input type="text" class="w-full border-b border-olive/20 py-2 focus:border-olive outline-none transition text-sm bg-transparent" placeholder="Ej. Grand Hotel Quito">
+
+                </div>
+
+                <div class="space-y-2 md:col-span-2">
+
+                    <label class="text-[10px] font-bold uppercase tracking-widest text-olive/50">Eje de Consultoría</label>
+
+                    <select class="w-full border-b border-olive/20 py-2 focus:border-olive outline-none transition text-sm bg-transparent">
+
+                        <option>Implementación de Chatbots & IA</option>
+
+                        <option>Automatización de Ventas Turísticas</option>
+
+                        <option>Estrategia de Contenido e Influencers</option>
+
+                        <option>Capacitación Técnica en IA</option>
+
+                    </select>
+
+                </div>
+
+                <button class="md:col-span-2 btn-primary py-5 font-bold text-xs uppercase tracking-widest mt-6">Consultar Disponibilidad</button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Suscripción -->
+
+    <section class="py-24 bg-white border-y border-olive/5">
+
+        <div class="max-w-3xl mx-auto px-6 text-center">
+
+            <h3 class="text-2xl font-bold mb-6 italic tracking-tight italic">Únete a "Guerra Intelligence"</h3>
+
+            <p class="text-sm text-olive/60 mb-10 leading-relaxed">Newsletter quincenal con estrategias tácticas sobre IA y automatización aplicadas específicamente al turismo de alto nivel.</p>
+
+            <div class="flex flex-col sm:flex-row shadow-sm">
+
+                <input type="email" placeholder="Su correo profesional" class="flex-grow border border-olive/10 px-6 py-4 outline-none focus:border-olive text-sm">
+
+                <button class="bg-olive text-white px-10 py-4 text-[10px] font-bold uppercase tracking-widest hover:bg-olive-dark transition">Suscribirse</button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Footer -->
+
+    <footer class="py-20 bg-white">
+
+        <div class="max-w-7xl mx-auto px-6">
+
+            <div class="flex flex-col md:flex-row justify-between items-start gap-12 mb-20">
+
+                <div>
+
+                    <span class="text-2xl font-bold tracking-tighter uppercase">José Andrés Guerra<span class="text-olive">.</span></span>
+
+                    <p class="text-olive/50 text-[10px] mt-4 max-w-xs leading-relaxed uppercase tracking-tighter italic">Transformación técnica para el ecosistema turístico y de hospitalidad.</p>
+
+                </div>
+
+                <div class="grid grid-cols-2 gap-16">
+
+                    <div class="space-y-4">
+
+                        <p class="text-[10px] font-bold text-olive uppercase tracking-[0.3em]">Navegación</p>
+
+                        <ul class="text-xs space-y-3 text-olive/60">
+
+                            <li><a href="#soluciones" class="hover:text-olive">Soluciones</a></li>
+
+                            <li><a href="#proyectos" class="hover:text-olive">Casos de Éxito</a></li>
+
+                            <li><a href="#blog" class="hover:text-olive">Perspectivas</a></li>
+
+                        </ul>
+
+                    </div>
+
+                    <div class="space-y-4">
+
+                        <p class="text-[10px] font-bold text-olive uppercase tracking-[0.3em]">Contacto</p>
+
+                        <ul class="text-xs space-y-3 text-olive/60">
+
+                            <li><a href="mailto:joseagb33@gmail.com" class="hover:text-olive">Email Directo</a></li>
+
+                            <li><a href="#" class="hover:text-olive">Linkedin</a></li>
+
+                            <li><a href="#" class="hover:text-olive">Behance</a></li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="pt-8 border-t border-olive/5 flex flex-col md:flex-row justify-between gap-6 text-[9px] font-bold text-olive/30 uppercase tracking-[0.4em]">
+
+                <span>© 2025 José Andrés Guerra | Performance Producer</span>
+
+                <span>Quito - Ecuador</span>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+</body>
+
+</html>
