@@ -14,22 +14,25 @@ collections:
         label: "Página de Inicio"
         file: "content/index.md"
         fields:
-          - { label: "Sección Hero", name: "hero", widget: "object", fields: [
+          - { label: "Hero Section", name: "hero", widget: "object", fields: [
+              { label: "Badge superior", name: "badge", widget: "string" },
               { label: "Título Principal", name: "title", widget: "string" },
-              { label: "Subtítulo", name: "subtitle", widget: "text" },
-              { label: "Imagen de Fondo", name: "image", widget: "image" }
-            ]}
-          - { label: "Sección Servicios", name: "services", widget: "list", fields: [
-              { label: "Nombre del Servicio", name: "name", widget: "string" },
+              { label: "Subtítulo Itálico", name: "title_italic", widget: "string" },
               { label: "Descripción", name: "description", widget: "text" }
             ]}
-
-  - name: "blog"
-    label: "Blog"
-    folder: "content/blog"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - { label: "Título", name: "title", widget: "string" }
-      - { label: "Fecha", name: "date", widget: "datetime" }
-      - { label: "Cuerpo", name: "body", widget: "markdown" }
+          - { label: "Logos Autoridad", name: "logos", widget: "list", fields: [
+              { label: "Nombre Institución", name: "name", widget: "string" }
+            ]}
+          - { label: "Casos de Éxito", name: "proyectos", widget: "list", fields: [
+              { label: "Imagen", name: "image", widget: "image" },
+              { label: "Título", name: "title", widget: "string" },
+              { label: "Etiqueta", name: "tag", widget: "string" },
+              { label: "Descripción", name: "description", widget: "text" },
+              { label: "Métrica ROI", name: "roi", widget: "string" }
+            ]}
+          - { label: "Ejes de Consultoría", name: "soluciones", widget: "list", fields: [
+              { label: "Título", name: "title", widget: "string" },
+              { label: "Descripción", name: "description", widget: "text" },
+              { label: "Footer Tag", name: "footer", widget: "string" },
+              { label: "Es destacado (Fondo Oliva)", name: "featured", widget: "boolean", default: false }
+            ]}
