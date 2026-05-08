@@ -1,17 +1,25 @@
 backend:
   name: git-gateway
-  branch: main # Asegúrate de que tu rama sea 'main' y no 'master'
+  branch: main
 
-media_folder: "public/images" # Donde se subirán las fotos
+media_folder: "public/images"
 public_folder: "/images"
 
 collections:
-  - name: "blog"
-    label: "Blog"
-    folder: "content/blog"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - { label: "Título", name: "title", widget: "string" }
-      - { label: "Fecha", name: "date", widget: "datetime" }
-      - { label: "Cuerpo", name: "body", widget: "markdown" }
+  - name: "paginas"
+    label: "Páginas"
+    delete: false # No queremos borrar la landing
+    files:
+      - name: "landing"
+        label: "Página de Inicio"
+        file: "content/index.md" # AQUÍ es donde se guardará el contenido
+        fields:
+          - { label: "Sección Hero", name: "hero", widget: "object", fields: [
+              { label: "Título Principal", name: "title", widget: "string" },
+              { label: "Subtítulo", name: "subtitle", widget: "text" },
+              { label: "Imagen de Fondo", name: "image", widget: "image" }
+            ]}
+          - { label: "Sección Servicios", name: "services", widget: "list", fields: [
+              { label: "Nombre del Servicio", name: "name", widget: "string" },
+              { label: "Descripción", name: "description", widget: "text" }
+            ]}
